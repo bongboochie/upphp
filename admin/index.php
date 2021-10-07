@@ -1,0 +1,28 @@
+<?php
+include('../header.php');
+?>
+<?php
+if($_SESSION['admin']!="true")
+{
+    header('location: http://localhost/login/');
+}
+    //include('manaPhoneEmpl.php');
+if(!isset($_GET['dropdown']))
+{
+    include('manaPhoneEmpl.php');
+}
+else
+{
+    if($_GET['dropdown']=="dbnd")
+    {
+        include('manaPhoneEmpl.php');
+    }
+    else
+    {
+        include('manaPhoneUnit.php');
+    }
+}
+?>
+<?php
+include('../footer.php');
+?>
